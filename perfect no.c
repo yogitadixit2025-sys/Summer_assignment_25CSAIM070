@@ -1,19 +1,26 @@
-#include<stdio.h>
-void main()
-{
-    int n,sum=0;
-    printf("Enter a no:");
-    scanf("%d",&n);
-    for(i=1;i<n;i++)
-    {
-        if(n%i==0)
-        {
-            sum=sum+i;
-        }
-    }
-    if(sum==n)
-    printf("perfect no:");
-    else
-    printf(" not perfect no:");
-return 0;
-}
+#include <stdio.h>
+
+int isPerfectNumber(int num) {
+    int sum = 0, i;
+
+        if (num <= 0) return 0;
+
+            for (i = 1; i < num; i++) {
+                    if (num % i == 0) {
+                                sum += i;
+                                        }
+                                            }
+
+                                                return sum == num;
+                                                }
+
+                                                int main() {
+                                                    int num = 28;
+                                                        if (isPerfectNumber(num)) {
+                                                                printf("%d is a perfect number.\n", num);
+                                                                    } else {
+                                                                            printf("%d is not a perfect number.\n", num);
+                                                                                }
+                                                                                    return 0;
+                                                                                    }
+                                                                                    
